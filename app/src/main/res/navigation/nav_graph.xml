@@ -2,17 +2,16 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/splash_fragment"
-    android:id="@+id/nav_graph">
-
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pizzasFragment">
     <fragment
-        android:id="@+id/splash_fragment"
-        android:name="n7.pizza.ui.splash.SplashFragment"
-        android:label="splash_fragment"
-        tools:layout="@layout/splash_fragment" >
-        <action
-            android:id="@+id/action_splash_fragment_self"
-            app:destination="@id/splash_fragment"
-            app:popUpTo="@id/nav_graph" />
-    </fragment>
+        android:id="@+id/pizzasFragment"
+        android:name="n7.pizza.ui.pizzas.PizzasFragment"
+        android:label="fragment_pizzas"
+        tools:layout="@layout/fragment_pizzas" />
+    <fragment
+        android:id="@+id/cabinetFragment"
+        android:name="n7.pizza.ui.cabinet.CabinetFragment"
+        android:label="fragment_cabinet"
+        tools:layout="@layout/fragment_cabinet" />
 </navigation>
