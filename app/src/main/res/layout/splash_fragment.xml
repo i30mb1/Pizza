@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.splash.SplashFragment">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?myBackgroundColor" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_logo_top_right"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_top_right"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo_top_left"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_top_left"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo_bot"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_bot"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo_bot_right"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_bot_right"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo_bot_left"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_bot_left"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo_top"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_top"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_width="@dimen/pizza_logo_width"
+                    android:layout_height="@dimen/pizza_logo_height"
+                    android:src="@drawable/pizza_full"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/atlantic"
+                android:text="@string/app_name"
+                android:textSize="36sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

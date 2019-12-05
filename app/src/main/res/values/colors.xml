@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Light Theme -->
+    <color name="myColorPrimary">#448aff</color>
+    <color name="myColorPrimaryVariant">#7E57C2</color>
+    <color name="myColorOnPrimary">#ffffff</color>
+    <color name="myColorSecondary">#448aff</color>
+    <color name="myColorSecondaryVariant">#7E57C2</color>
+    <color name="myColorOnSecondary">#ffffff</color>
+    <color name="myColorError">#D50000</color>
+    <color name="myColorBackground">#33000000</color>
+    <color name="myCextColorPrimary">#212121</color>
+    <color name="myCextColorSecondary">#757575</color>
+    <!-- Dark Theme -->
+    <color name="myColorPrimaryDark">#4F009F</color>
+    <color name="myColorSecondaryDark">#4F009F</color>
+    <color name="myColorBackgroundDark">#19FFFFFF</color>
+
+</resources>

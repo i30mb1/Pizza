@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Status bar color ...-->
+        <item name="colorPrimaryDark">@color/myColorOnPrimary</item>
+
+        <!-- Buttons, Toolbar, Selected Items, Tabs, Progress -->
+        <item name="colorPrimary">@color/myColorPrimary</item>
+        <!-- A color top of the primary color (text color on Button, Toolbar, ...) -->
+        <item name="colorOnPrimary">@color/myColorOnPrimary</item>
+        <!-- A tonal variation of the primary color.-->
+        <item name="colorPrimaryVariant">@color/myColorPrimaryVariant</item>
+
+        <!-- Fab, Slider, CheckBox, Switch, Radio Button -->
+        <item name="colorSecondary">@color/myColorSecondary</item>
+        <!--  A color on top of the secondary color.-->
+        <item name="colorOnSecondary">@color/myColorOnSecondary</item>
+        <!--  A tonal variation of the secondary color.-->
+        <item name="colorSecondaryVariant">@color/myColorSecondaryVariant</item>
+
+        <item name="colorError">@color/myColorError</item>
+
+        <item name="myBackgroundColor">@color/myColorBackground</item>
+
+        <!--тёмные иконки для светкой панели уведомления-->
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.MyApp.SmallComponent.Light</item>
+    </style>
+
+    <style name="Theme.MyApp.Main" parent="AppTheme">
+
+    </style>
+
+    <style name="Theme.MyApp.Splash" parent="AppTheme">
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:ignore="NewApi">shortEdges</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.SmallComponent.Light" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">@dimen/dimenCornerSize</item>
+    </style>
+
+    <style name="ShapeAppearance.MyApp.SmallComponent.Dark" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">@dimen/dimenCornerSize</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+</resources>
