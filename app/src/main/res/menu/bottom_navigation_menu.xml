@@ -5,13 +5,13 @@
         android:id="@+id/pizzasFragment"
         android:enabled="true"
         android:icon="@drawable/ic_pizza"
-        android:title="@string/menu_action_pizza"
-        app:showAsAction="always" />
+        android:title=""
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/cabinetFragment"
         android:enabled="true"
         android:icon="@drawable/ic_cabinet"
-        android:title="@string/menu_action_cabinet"
+        android:title=""
         app:showAsAction="always" />
 
 </menu>

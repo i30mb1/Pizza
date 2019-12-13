@@ -100,7 +100,6 @@ class SplashActivity : AppCompatActivity() {
                         finish()
                         startActivity(Intent(this@SplashActivity,MainActivity::class.java))
                     }
-
                 }
             })
         }

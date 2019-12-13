@@ -4,9 +4,13 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.badge.BadgeUtils
 import com.google.android.material.snackbar.Snackbar
+import kotlinx.android.synthetic.main.main_activity.*
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import n7.pizza.databinding.MainActivityBinding
@@ -22,6 +26,9 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNav.setupWithNavController(navController)
+
+        binding.bottomNav.getOrCreateBadge(R.id.cabinetFragment).number = 5
+
     }
 
     override fun onBackPressed() {
