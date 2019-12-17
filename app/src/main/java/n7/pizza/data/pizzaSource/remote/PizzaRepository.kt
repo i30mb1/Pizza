@@ -4,7 +4,10 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Source
+import com.google.firebase.firestore.ktx.toObjects
 import kotlinx.coroutines.tasks.await
 import n7.pizza.data.pizzaSource.model.Pizza
 import javax.inject.Inject
@@ -27,15 +30,15 @@ class PizzaRepository @Inject constructor(
                 }
 
                 override fun onDataChange(p0: DataSnapshot) {
-                    p0
+                    p0.getValue(Pizza::class.java)
                }
             })
     }
 
     suspend fun writeInFireStore() {
         firestore.collection("pizzaCollection")
-            .document()
-            .set(hashMapOf("name" to "хуица"))
+            .document("3")
+            .update("position", FieldValue.increment(1))
     }
 
     suspend fun readFromFireStore() {
@@ -43,6 +46,7 @@ class PizzaRepository @Inject constructor(
 //            .document("1")
             .get().await()
         await.toObjects(Pizza::class.java)
+        await.toObjects<Pizza>()
     }
 
     companion object {
