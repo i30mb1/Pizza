@@ -2,29 +2,20 @@ package n7.pizza.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.flow.callbackFlow
+import com.google.firebase.firestore.ktx.toObject
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlin.coroutines.suspendCoroutine
+import n7.pizza.data.pizzaSource.model.Pizza
+import n7.pizza.ui.pizzas.domain.usecase.GetAllPizzaUseCase
+import javax.inject.Inject
 
-class MainViewModel : ViewModel() {
+class MainViewModel @Inject constructor(
+    private val getAllPizzaUseCase: GetAllPizzaUseCase
+) : ViewModel() {
 
     init {
-
         viewModelScope.launch {
-            suspendCoroutine { continuation ->
-
-            }
-
-            callbackFlow {
-
-            }
-
-            suspendCancellableCoroutine {
-
-            }
+             getAllPizzaUseCase.getAll()
         }
-
     }
 
 }
